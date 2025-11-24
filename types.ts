@@ -1,3 +1,4 @@
+
 export interface HourlyForecast {
   hour: string;
   score: number; // 0-100
@@ -40,4 +41,20 @@ export interface TrendingData {
   items: TrendingItem[];
   rawText: string;
   sources: { title: string; uri: string }[];
+}
+
+export interface ScheduledPost {
+  id: string;
+  platform: string;
+  content: string;
+  scheduledTime: string; // ISO string
+  createdAt: number;
+}
+
+export interface PostedItem {
+  id: string;
+  platform: string;
+  content: string;
+  postedAt: number;
+  status: 'Success' | 'Failed';
 }
